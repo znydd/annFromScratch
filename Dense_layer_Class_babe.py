@@ -18,14 +18,27 @@ class Layer_Dense:
         self.output = np.dot(inputs, self.weights) + self.biases
     
 
+class Acivation_ReLU:
+    def __init__(self) -> None:
+        pass
+    
+    def forward(self, inputs):
+        self.output = np.maximum(0, inputs)
+
+
 
 X, y = spiral_data(samples=100, classes=3)
 
 dense1 = Layer_Dense(2,3)
 
-dense1.forward(X)
+activation1 = Acivation_ReLU()
 
-print(dense1.output[:5])
+# First through neuron
+dense1.forward(X)
+# Then through activation function
+activation1.forward(dense1.output)
+
+print(activation1.output[:5])
 
 
 
