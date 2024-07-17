@@ -1,0 +1,20 @@
+-We use nonlinear activation function to capture nonlinear pattern in Data
+-We usually use 2 type of activation function in a ann 1/on dense layer 2/on output layer
+
+*The step activation function:
+To mimic a neuron “firing” or “not firing”
+based on input information.
+In a single neuron, if the (weights·inputs + bias) results in a value greater than 0, 
+the neuron will fire and output a 1, otherwise, it will output a 0.
+
+
+*The Linear Activation Function:
+y=x line equation
+This activation function is usually applied to the last layer’s output in the case of a regression
+model
+
+*The Sigmoid Activation Function:
+obsidian://open?vault=2nd%20Brain&file=Deep%20Learning%2FActivation%20Function
+
+*The Rectified Linear Activation Function:
+Easily computable but nonlinear function
