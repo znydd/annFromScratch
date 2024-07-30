@@ -90,4 +90,13 @@ loss = loss_function.calculate(activation2.output, y)
 
 print('loss:', loss)
 
+predictions = np.argmax(activation2.output, axis=1)
+
+#If targets are OHE
+if len(y.shape) == 2:
+    y = np.argmax(y, axis=1)
+
+accuracy = np.mean(predictions==y)
+
+print('acc:', accuracy)
 
