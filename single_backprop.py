@@ -79,3 +79,5 @@ z1 = xw0 + xw1 + xw2 + b
 y = max(z1, 0)
 print(y) # we just decreacsed that from 6 to 5.9
 
+# through reducing the redundent terms we can write dresu/dx0 for example 
+drelu_dx0 = dvalue * (1.0 if z > 0 else 0.0) * w[0]
